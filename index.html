@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoSec Portfolio | Cybersecurity Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-black': '#0a0a0a',
+                        'cyber-dark': '#111111',
+                        'cyber-green': '#00ff41',
+                        'cyber-gray': '#2d2d2d',
+                    },
+                    fontFamily: {
+                        'mono': ['"Courier New"', 'Courier', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glitch-text:hover {
+            text-shadow: 2px 0 #00ff41, -2px 0 #ff0000;
+        }
+        .terminal-cursor::after {
+            content: '_';
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-cyber-black text-gray-300 font-mono selection:bg-cyber-green selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-cyber-black/90 backdrop-blur border-b border-cyber-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-cyber-green font-bold text-xl">&lt;root/&gt;</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="hover:text-cyber-green px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="hover:text-cyber-green px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#skills" class="hover:text-cyber-green px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#projects" class="hover:text-cyber-green px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#contact" class="border border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-black px-3 py-2 rounded-md text-sm font-medium transition-all">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-left">
+                <p class="text-cyber-green mb-4">Hello, World! I am</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 glitch-text">
+                    Bracely Makoni
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-gray-400 mb-8">
+                    Information Security Student <span class="text-cyber-green">&&</span> <br>
+                    Ethical Hacker
+                </h2>
+                <p class="text-gray-400 mb-8 max-w-lg">
+                    Passionate about securing digital infrastructures and identifying vulnerabilities before the bad guys do. Specializing in Penetration Testing and Network Defense.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="bg-cyber-green text-black px-6 py-3 rounded font-bold hover:bg-green-400 transition-colors">View Projects</a>
+                    <a href="#contact" class="border border-gray-600 px-6 py-3 rounded font-bold hover:border-cyber-green hover:text-cyber-green transition-colors">Contact Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                <div class="bg-cyber-dark p-6 rounded-lg border border-cyber-gray shadow-2xl w-full max-w-md">
+                    <div class="flex space-x-2 mb-4">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="font-mono text-sm">
+                        <p class="mb-2"><span class="text-green-500">user@kali</span>:<span class="text-blue-500">~</span>$ whoami</p>
+                        <p class="mb-4 text-gray-300">infosec_student</p>
+                        <p class="mb-2"><span class="text-green-500">user@kali</span>:<span class="text-blue-500">~</span>$ cat skills.txt</p>
+                        <p class="mb-4 text-gray-300">
+                            [+] Network Security<br>
+                            [+] Web App Pentesting<br>
+                            [+] Python & Bash Scripting<br>
+                            [+] Linux Administration
+                        </p>
+                        <p class="mb-2"><span class="text-green-500">user@kali</span>:<span class="text-blue-500">~</span>$ ./start_career.sh<span class="terminal-cursor"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-cyber-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+                <span class="text-cyber-green mr-2">01.</span> About Me
+                <span class="ml-4 h-px bg-cyber-gray flex-grow max-w-xs"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        I am currently pursuing a degree in Cybersecurity. My journey began when I first installed Linux and realized the power of the command line. Since then, I've been dedicated to understanding how systems work at a low level to better protect them.
+                    </p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        I actively participate in CTF (Capture The Flag) competitions to sharpen my skills and stay updated with the latest vulnerabilities and exploit techniques. My goal is to contribute to a safer digital world through ethical hacking and robust security practices.
+                    </p>
+                    <p class="text-gray-400">
+                        When I'm not analyzing packet captures or auditing code, you can find me contributing to open-source security tools or reading up on the latest CVEs.
+                    </p>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-cyber-green rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative bg-cyber-black p-6 rounded-lg border border-cyber-gray h-full flex flex-col justify-center items-center text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-cyber-green mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <h3 class="text-xl font-bold text-white mb-2">Security Mindset</h3>
+                        <p class="text-gray-400">"Security is not a product, but a process."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+                <span class="text-cyber-green mr-2">02.</span> Technical Arsenal
+                <span class="ml-4 h-px bg-cyber-gray flex-grow max-w-xs"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Offensive Security -->
+                <div class="bg-cyber-dark p-6 rounded-lg border border-cyber-gray hover:border-cyber-green transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                        <svg class="w-5 h-5 text-cyber-green mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Offensive Security
+                    </h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-green rounded-full mr-2"></span>Penetration Testing</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-green rounded-full mr-2"></span>Vulnerability Assessment</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-green rounded-full mr-2"></span>Metasploit Framework</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-green rounded-full mr-2"></span>Burp Suite Pro</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-green rounded-full mr-2"></span>SQL Injection</li>
+                    </ul>
+                </div>
+
+                <!-- Defensive Security -->
+                <div class="bg-cyber-dark p-6 rounded-lg border border-cyber-gray hover:border-cyber-green transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                        <svg class="w-5 h-5 text-cyber-green mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        Defensive Security
+                    </h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-green rounded-full mr-2"></span>Network Monitoring</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-green rounded-full mr-2"></span>Firewall Configuration</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-green rounded-full mr-2"></span>Incident Response</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-green rounded-full mr-2"></span>SIEM (Splunk)</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-cyber-green rounded-full mr-2"></span>Hardening Linux</li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Languages -->
+                <div class="bg-cyber-dark p-6 rounded-lg border border-cyber-gray hover:border-cyber-green transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                        <svg class="w-5 h-5 text-cyber-green mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        Tools & Languages
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-cyber-black border border-cyber-gray rounded text-sm text-cyber-green">Python</span>
+                        <span class="px-3 py-1 bg-cyber-black border border-cyber-gray rounded text-sm text-cyber-green">Bash</span>
+                        <span class="px-3 py-1 bg-cyber-black border border-cyber-gray rounded text-sm text-cyber-green">C/C++</span>
+                        <span class="px-3 py-1 bg-cyber-black border border-cyber-gray rounded text-sm text-cyber-green">Wireshark</span>
+                        <span class="px-3 py-1 bg-cyber-black border border-cyber-gray rounded text-sm text-cyber-green">Nmap</span>
+                        <span class="px-3 py-1 bg-cyber-black border border-cyber-gray rounded text-sm text-cyber-green">Git</span>
+                        <span class="px-3 py-1 bg-cyber-black border border-cyber-gray rounded text-sm text-cyber-green">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-cyber-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center">
+                <span class="text-cyber-green mr-2">03.</span> Featured Projects
+                <span class="ml-4 h-px bg-cyber-gray flex-grow max-w-xs"></span>
+            </h2>
+
+            <div class="space-y-12">
+                <!-- Project 1 -->
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2 bg-cyber-black p-1 rounded border border-cyber-gray">
+                        <div class="h-64 bg-gray-800 flex items-center justify-center relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-cyber-green/10 group-hover:bg-transparent transition-colors"></div>
+                            <svg class="w-20 h-20 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <p class="text-cyber-green text-sm mb-2">Python Scripting</p>
+                        <h3 class="text-2xl font-bold text-white mb-4">Network Packet Sniffer</h3>
+                        <div class="bg-cyber-black p-6 rounded border border-cyber-gray mb-6 shadow-lg">
+                            <p class="text-gray-400 text-sm">
+                                A custom packet sniffer built with Python and Scapy. It captures and analyzes network traffic in real-time, identifying potential security threats and logging suspicious activities. Features include protocol filtering and pcap export.
+                            </p>
+                        </div>
+                        <ul class="flex flex-wrap gap-4 text-sm text-gray-500 font-mono mb-6">
+                            <li>Python</li>
+                            <li>Scapy</li>
+                            <li>TCP/IP</li>
+                            <li>Socket Programming</li>
+                        </ul>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-cyber-green transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg></a>
+                            <a href="#" class="text-white hover:text-cyber-green transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="flex flex-col md:flex-row-reverse gap-8">
+                    <div class="md:w-1/2 bg-cyber-black p-1 rounded border border-cyber-gray">
+                        <div class="h-64 bg-gray-800 flex items-center justify-center relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-cyber-green/10 group-hover:bg-transparent transition-colors"></div>
+                            <svg class="w-20 h-20 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex flex-col justify-center text-left md:text-right">
+                        <p class="text-cyber-green text-sm mb-2">Web Security</p>
+                        <h3 class="text-2xl font-bold text-white mb-4">Vulnerable Web App Lab</h3>
+                        <div class="bg-cyber-black p-6 rounded border border-cyber-gray mb-6 shadow-lg ml-auto">
+                            <p class="text-gray-400 text-sm">
+                                A Dockerized web application intentionally riddled with OWASP Top 10 vulnerabilities. Created for educational purposes to demonstrate SQL injection, XSS, and CSRF attacks in a controlled environment.
+                            </p>
+                        </div>
+                        <ul class="flex flex-wrap gap-4 text-sm text-gray-500 font-mono mb-6 justify-start md:justify-end">
+                            <li>Docker</li>
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>OWASP</li>
+                        </ul>
+                        <div class="flex space-x-4 justify-start md:justify-end">
+                            <a href="#" class="text-white hover:text-cyber-green transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg></a>
+                            <a href="#" class="text-white hover:text-cyber-green transition-colors"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-12">Certifications</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-cyber-dark border border-cyber-gray px-8 py-4 rounded-full flex items-center space-x-4 hover:border-cyber-green transition-colors">
+                    <span class="text-cyber-green font-bold">CompTIA</span>
+                    <span class="text-gray-300">Security+</span>
+                </div>
+                <div class="bg-cyber-dark border border-cyber-gray px-8 py-4 rounded-full flex items-center space-x-4 hover:border-cyber-green transition-colors">
+                    <span class="text-cyber-green font-bold">eLearnSecurity</span>
+                    <span class="text-gray-300">eJPT</span>
+                </div>
+                <div class="bg-cyber-dark border border-cyber-gray px-8 py-4 rounded-full flex items-center space-x-4 hover:border-cyber-green transition-colors">
+                    <span class="text-cyber-green font-bold">Cisco</span>
+                    <span class="text-gray-300">CCNA (In Progress)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-cyber-dark">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-cyber-green mb-4">04. What's Next?</p>
+            <h2 class="text-4xl font-bold text-white mb-6">Get In Touch</h2>
+            <p class="text-gray-400 mb-12 text-lg">
+                I'm currently looking for internship opportunities or entry-level positions in Information Security. Whether you have a question or just want to say hi, my inbox is always open!
+            </p>
+            <a href="mailto:bracelym@gmail.com" class="inline-block border-2 border-cyber-green text-cyber-green px-8 py-4 rounded font-bold hover:bg-cyber-green hover:text-black transition-all duration-300">
+                Ping Me
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-cyber-black border-t border-cyber-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <div class="flex space-x-6 mb-4">
+                <a href="https://github.com/Bracely" class="text-gray-400 hover:text-cyber-green transition-colors">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/bracely-makoni-b54bb7338/" class="text-gray-400 hover:text-cyber-green transition-colors">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm font-mono">Designed & Built by Bracely Makoni</p>
+        </div>
+    </footer>
+
+</body>
+</html>
